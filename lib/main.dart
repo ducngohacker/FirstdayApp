@@ -64,13 +64,13 @@ class _RandomWordsState extends State<RandomWords> {
         color: isSaved ? Colors.red : null,
       ),
       onTap: () {
-        setState(() {
+        
           if (isSaved) {
             Provider.of<FavoriteItemSavedProvider>(context,listen: false).removeFavoriteItem(pair);
           } else {
             Provider.of<FavoriteItemSavedProvider>(context,listen: false).addFavoriteItem(pair);
           }
-        });
+        
       },
     );
   }
